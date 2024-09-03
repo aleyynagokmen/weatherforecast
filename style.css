@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.container {
+    background-image: url('daniel-j-schwarz-9morYUgYmX4-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* head */
+
+.topContent {
+    padding: 10px;
+    background-color: #B1BCBE;
+    color: #3f543b;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topContent .link {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title h3 {
+    color: #668060;
+    font-size: 2rem;
+    left: 15rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    bottom: 14.4rem;
+}
+
+button,
+input {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    border-radius: 500px;
+    width: 23rem;
+    cursor: pointer;
+}
+
+button {
+    color: #3f543b;
+}
+
+button:hover {
+    background-color: #3f543b;
+    transition: 1s;
+    color: #fff;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+#inf {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: right;
+}
+
+/*  weather info */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.weatherShow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 235px;
+    background-color: transparent;
+    border-radius: 500px;
+    width: 70rem;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 50px;
+}
+
+
+.weatherShow .cities {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.weatherShow .city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #668060;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 900px;
+    background-color: #B1BCBE;
+    color: #10200d;
+    width: 18rem;
+    height: 210px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.weatherShow .cities> :nth-child(n+5) {
+    display: none;
+}
+
+/* auto loc */
+
+.auto-city {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #668060;
+    position: absolute;
+    margin-bottom: 35rem;
+    height: 80px;
+    right: 400px;
+    width: 13rem;
+    padding: 0 50px;
+    border-radius: 500px;
+}
+
+.auto-city .city-name,
+.auto-city .city-temp,
+.auto-city .city-icon {
+    color: rgb(203, 223, 204);
+    flex: 1;
+    display: flex;
+}
+
+.city-name {
+    text-align: center;
+    font-size: 20px;
+}
+
+.city-temp {
+    text-align: center;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 27px;
+
+}
+
+
+.msg {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #B1BCBE;
+    color: #3f543b;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* ! resp */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .title h3 {
+        color: #668060;
+    }
+
+    .weatherShow {
+        width: 66rem;
+        height: 230px;
+    }
+
+    .auto-city {
+        left: 380px;
+        margin-top: -3px;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+
+    .weatherShow {
+        width: 61rem;
+        left: 5px;
+        height: 200px;
+    }
+
+    .weatherShow .city {
+        width: 19rem;
+        height: 190px;
+    }
+
+    .auto-city {
+        left: 340px;
+        margin-top: -35px;
+
+    }
+}
+
+@media(max-width: 990px) {
+
+
+    .weatherShow {
+        width: 53rem;
+        height: 190px;
+    }
+
+    .weatherShow .city {
+        width: 19rem;
+        height: 175px;
+    }
+
+    .auto-city {
+        left: 277px;
+        margin-top: -45px;
+
+    }
+
+}
+
+
+@media (max-width: 885px) {
+    .title h3 {
+        font-size: 1.8rem;
+        left: 11rem;
+    }
+
+    input,
+    button {
+        width: 19rem;
+    }
+
+    .weatherShow {
+        width: 47rem;
+        height: 240px;
+    }
+
+    .weatherShow .cities {
+        gap: 2px;
+        width: 45rem;
+        margin-right: 45px;
+    }
+
+    .weatherShow .city {
+        font-size: 13px;
+    }
+
+    #inf {
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .topContent .link {
+        display: none;
+    }
+
+    .auto-city {
+        left: 205px;
+        margin-top: -27px;
+
+    }
+
+}
+
+
+@media (max-width: 670px) {
+
+    input,
+    #button {
+        width: 17rem;
+        bottom: 8rem;
+        position: relative;
+    }
+
+    .weatherShow {
+        width: 24.5rem;
+        height: 380px;
+        border-radius: 20px;
+        background-color: transparent;
+    }
+
+    .weatherShow .city {
+        font-size: 15px;
+        height: 240px;
+        width: 11.6rem;
+        border-radius: 10px;
+    }
+
+    .topContent .link {
+        display: none;
+    }
+
+    .auto-city {
+        left: 40px;
+        margin-top: 1px;
+
+    }
+
+}
+
+@media (max-width: 554px) {
+
+    .title h3 {
+        left: 8rem;
+    }
+
+    input,
+    #button {
+        width: 15rem;
+        bottom: 7rem;
+    }
+
+    .weatherShow .city {
+        font-size: 15px;
+        height: 240px;
+        width: 10rem;
+        border-radius: 10px;
+    }
+
+    .city {
+        right: 10px;
+    }
+}
+
+@media (max-width:487px) {
+    .title {
+        justify-content: center;
+        align-items: center;
+    }
+
+    input,
+    #button {
+        left: 8rem;
+        margin-top: 12px;
+    }
+
+    #button {
+        margin-left: 3px;
+    }
+}
+
+@media (max-width:490px) {
+    .title {
+        font-size: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
